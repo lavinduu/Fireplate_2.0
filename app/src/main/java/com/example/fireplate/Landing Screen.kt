@@ -31,7 +31,7 @@ fun LandingScreen(navController: NavController) {
     ) {
         // Background Image
         Image(
-            painter = painterResource(id = R.drawable.bg),
+            painter = painterResource(id = R.drawable.background),
             contentDescription = "Background",
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
@@ -57,7 +57,7 @@ fun LandingScreen(navController: NavController) {
                 Text(text = "Sign In", color = Color.White, fontSize = 18.sp)
             }
 
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(35.dp))
 
             // Sign Up Prompt
             Row {
