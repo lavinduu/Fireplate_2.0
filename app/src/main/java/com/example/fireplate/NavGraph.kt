@@ -25,10 +25,11 @@ fun FirePlateApp() {
         composable("landing") { LandingScreen(navController) }
         composable("login") { LoginScreen(navController) }
         composable("SignUp") { SignUpScreen(navController) }
+        // Screens with bottom bar
         composable("home") { HomeScreen(navController) }
         composable("cart") { CartScreen(navController) }
-        composable("favourites") { FavouriteScreen(navController) }
-
-        // Add more routes here
+        composable("favourites") { FavouritesScreen(navController) }
+        composable("notifications") { NotificationsScreen(navController) }
+        composable("profile") { ProfileScreen(navController) }
     }
 }
