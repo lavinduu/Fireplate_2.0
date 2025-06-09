@@ -36,6 +36,7 @@ fun LoginScreen(navController: NavController) {
         modifier = Modifier
             .fillMaxSize()
             .padding(24.dp)
+            //test
     ) {
         // Top image
         Image(
