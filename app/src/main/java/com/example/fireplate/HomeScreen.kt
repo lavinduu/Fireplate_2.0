@@ -124,21 +124,25 @@ fun HomeScreen(navController: NavController) {
             // Scrollable Food Cards
             LazyRow {
                 items(foodItems) { item ->
-                    FoodCard(item = item)
+                    FoodCard(item = item) {
+                        navController.navigate("foodDetail")
+                    }
                 }
             }
+
         }
     }
 }
 
 @Composable
-fun FoodCard(item: FoodItem) {
+fun FoodCard(item: FoodItem, onClick: () -> Unit = {}) {
     var isFavourite by remember { mutableStateOf(false) }
 
     Card(
         modifier = Modifier
             .width(200.dp)
-            .padding(end = 16.dp),
+            .padding(end = 16.dp)
+            .clickable { onClick() }, // ✅ Makes the entire card clickable
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
@@ -194,6 +198,7 @@ fun FoodCard(item: FoodItem) {
         }
     }
 }
+
 
 data class FoodItem(
     val name: String,

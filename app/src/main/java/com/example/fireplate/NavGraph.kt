@@ -31,5 +31,8 @@ fun FirePlateApp() {
         composable("favourites") { FavouritesScreen(navController) }
         composable("notifications") { NotificationsScreen(navController) }
         composable("profile") { ProfileScreen(navController) }
+        composable("foodDetail") { FoodDetailScreen(navController) }
+
+
     }
 }
